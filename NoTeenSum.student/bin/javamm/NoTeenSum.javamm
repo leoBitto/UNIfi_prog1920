@@ -1,0 +1,10 @@
+int noTeenSum(int a, int b, int c) {
+  return (fixTeen(a)+fixTeen(b)+fixTeen(c));
+}
+int fixTeen(int a) {
+	int rit = 0;
+	if(a<13||a>19||a==15||a==16) {
+		rit = a;
+	}
+	return rit;
+}

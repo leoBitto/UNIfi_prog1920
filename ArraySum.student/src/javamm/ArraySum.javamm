@@ -1,0 +1,6 @@
+int[] arraySum(int[] a, int[] b) {
+	for(int i=0;i<=a.length-1;i++) {
+		a[i] = a[i]+b[i];
+	}
+	return a;
+}

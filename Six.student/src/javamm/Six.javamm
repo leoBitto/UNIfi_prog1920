@@ -1,0 +1,9 @@
+boolean six(int a, int b) {
+	/*boolean truth = false;
+	if(a==6||b==6) {
+		truth = true;
+	}else if(a+b==6||a-b==6||b-a==6) {
+		truth = true;
+	}*/
+	return (a==6||b==6||a+b==6||a-b==6||b-a==6);
+}

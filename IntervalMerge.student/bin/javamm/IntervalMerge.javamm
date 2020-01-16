@@ -1,0 +1,106 @@
+/*
+ * Dati 2 intervalli chiusi [a,b] e [c,d] che 
+ * si sovrappongono (ovvero tali che a<=c<=b), 
+ * la loro fusione consiste dell'intervallo [a,max(b,d)]. 
+ * Dati n intervalli chiusi, specificati dai due estremi 
+ * sinistro e destro e ordinati in modo non decrescente 
+ * rispetto agli estremi sinistri, la fusione di questi 
+ * intervalli consiste nel fondere tutti gli intervalli 
+ * che si sovrappongono. Ad esempio, la fusione degli 
+ * intervalli [1, 3],[2, 6],[8, 10] e [15, 18] restituisce 
+ * gli intervalli [1,6],[8,10] e [15,18] , la fusione degli 
+ * intervalli [1, 3],[2, 4],[5, 7] e [6, 8] restituisce gli 
+ * intervalli [1,4] e [5,8], e la fusione degli intervalli 
+ * [3, 6],[5, 7],[6, 12],[10, 12],[11, 16] restituisce 
+ * l'intervallo [3,16]. Scrivere un metodo, chiamato intervalMerge, 
+ * che data un input una matrice di interi positivi di 
+ * dimensione nx2, rappresentante n intervalli chiusi ordinati 
+ * in modo non decrescente rispetto alla prima colonna, 
+ * restituisca la matrice degli intervalli ottenuti dalla 
+ * fusione degli n intervalli. 
+ * 
+ * ESEMPI
+ * Input: {{1, 3}, {2, 6}, {8, 10}, {15, 18}}
+ * Output: {{1, 6}, {8, 10}, {15, 18}}
+ * 
+ * Input: {{1, 3}, {2, 4}, {5, 7}, {6, 8}}
+ * Output: {{1, 4}, {5, 8}}
+ * 
+ * Input: {{3, 6}, {5, 7}, {6, 12}, {10, 12}, {11, 16}}
+ * Output: {{3, 16}}.
+ */
+void printMatrix(int [][]a) {
+
+	
+	System.out.println(a.length);
+	System.out.println(a[0].length);
+}
+// fusore che prende 2 array, estratti dalla matrice
+// e restituisce un array lungo 2 fusione dei due
+int [] merge(int[] a, int [] b) {
+	int [] r = new int [2];
+	//ATTENZIONE RICHIEDE CHE IL PRIMO ARRAY ABBIA IL PRIMO NUMERO
+	// MINORE DEL PRIMO VALORE DEL SECONDO ARRAY
+	r[0] = a[0];
+	
+	int a1 = a[1];
+	int b1 = b[1];
+	if(a1<=b1) {
+		r[1]=a1;
+	}else {
+		r[1]=b1;
+	}
+	return r;
+}
+int[][] intervalMerge(int[][] m) {
+	//facciamo una passata per vedere la dimensione 
+	// dell'array di ritorno, creiamo una matrice della
+	// giusta dimensione 
+	int counter = m.length;
+	// controlla se il secondo valore di un array 
+	// sia maggiore o uguale il primo valore degli
+	// array seguenti quando lo trovi maggiore controlla
+	// il secondo valore di quell'array e fai la stessa
+	// verifica, ogni volta che si passa da un array a l'altro
+	// dimnuisci il counter
+	for(int i=0;i<m.length-1;i++){
+		
+		if(m[i][1]>=m[i+1][0]) {
+			// devono essere fusi quindi:
+			counter--;
+		}
+	}
+	
+	System.out.println("counter: " + counter);
+	
+	//crea array di dimensioni adatte
+	int [][] r = new int [counter][2];
+	// riempi array: fai un ciclo che fonde coppie di
+	// valori tramite merge e poi prendi i valori
+	// restituiti da merge e inseriscili nell'array r
+	int index = 0;
+	while(index<r.length){
+		for(int i=0;i<m.length-1;i++){
+			
+			System.out.println("indice di m: " + i);
+			
+			if(m[i][1]>=m[i+1][0]) {
+				
+				System.out.println("indice di r: " + index);
+				
+				int [] temp = merge(m[i],m[i+1]);
+				r[index][0] = temp[0];
+				r[index][1] = temp[1];
+				index++;
+			}
+		}
+	}
+	return r;
+} 
+int [][] a = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+//int [][] b = {{1, 3}, {2, 4}, {5, 7}, {6, 8}};
+//int [][] c = {{3, 6}, {5, 7}, {6, 12}, {10, 12}, {11, 16}};
+intervalMerge(a);
+//intervalMerge(b);
+//intervalMerge(c);
+

@@ -1,0 +1,13 @@
+boolean order(int a, int b, int c, boolean noA) {
+	/*boolean truth = false;
+	if(noA) {
+		if(b<c) {
+			truth = true;
+		}
+	}else {
+		if(a<b&&b<c) {
+			truth = true;
+		}
+	}*/
+	return (noA&&b<c||a<b&&b<c);
+}

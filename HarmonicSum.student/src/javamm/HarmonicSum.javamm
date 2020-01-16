@@ -1,0 +1,18 @@
+int harmonicSum(int x) {
+	double sumH = 0.0;
+	int i = 1;
+	while(sumH < x){
+		sumH = sumH + H(i);
+		i++;
+	}
+	return i-1;
+}
+double H(int n) {
+	double sum = 0.0;
+	double counter = 1;
+	while(counter<=n) {
+		sum += 1/counter;
+		counter++;
+	}
+	return sum;
+}

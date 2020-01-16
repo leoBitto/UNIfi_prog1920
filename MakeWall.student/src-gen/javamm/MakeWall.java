@@ -1,0 +1,16 @@
+package javamm;
+
+@SuppressWarnings("all")
+public class MakeWall {
+  public static boolean isWallDoable(int s, int b, int g) {
+    int s1 = (g / 6);
+    if ((((s1 >= 0) && (s1 <= s)) && (((s1 * 5) >= 0) && ((s1 * 5) <= b)))) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  public static void main(String[] args) {
+  }
+}
