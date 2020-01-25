@@ -1,108 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<list key="installedFeatures">
-		<item value="org.eclipse.buildship:3.1.2.v20190903-1802"/>
-		<item value="org.eclipse.eclemma.feature:3.1.2.201903112331"/>
-		<item value="org.eclipse.egit.mylyn:5.5.0.201909110433-r"/>
-		<item value="org.eclipse.egit:5.5.0.201909110433-r"/>
-		<item value="org.eclipse.emf.common:2.16.0.v20190625-1131"/>
-		<item value="org.eclipse.emf.ecore:2.19.0.v20190822-1451"/>
-		<item value="org.eclipse.epp.mpc:1.8.0.v20190725-1807"/>
-		<item value="org.eclipse.help:2.2.700.v20190916-1045"/>
-		<item value="org.eclipse.jgit.ssh.apache:5.5.0.201909110433-r"/>
-		<item value="org.eclipse.jgit:5.5.0.201909110433-r"/>
-		<item value="org.eclipse.m2e.feature:1.13.0.20190716-1624"/>
-		<item value="org.eclipse.m2e.logback.feature:1.13.0.20190716-1624"/>
-		<item value="org.eclipse.mylyn.bugzilla_feature:3.24.2.v20180905-0003"/>
-		<item value="org.eclipse.mylyn.builds:1.16.0.v20180905-1907"/>
-		<item value="org.eclipse.mylyn.commons.identity:1.16.0.v20180904-2231"/>
-		<item value="org.eclipse.mylyn.commons.notifications:1.16.0.v20180904-2231"/>
-		<item value="org.eclipse.mylyn.commons.repositories.http:1.16.0.v20180904-2231"/>
-		<item value="org.eclipse.mylyn.commons.repositories:1.16.0.v20180904-2231"/>
-		<item value="org.eclipse.mylyn.commons:3.24.2.v20180904-2231"/>
-		<item value="org.eclipse.mylyn.context_feature:3.24.2.v20180905-0014"/>
-		<item value="org.eclipse.mylyn.discovery:3.24.2.v20180904-2231"/>
-		<item value="org.eclipse.mylyn.git:1.16.0.v20170629-1738"/>
-		<item value="org.eclipse.mylyn.hudson:1.16.0.v20180403-2055"/>
-		<item value="org.eclipse.mylyn.ide_feature:3.24.2.v20180905-0014"/>
-		<item value="org.eclipse.mylyn.java_feature:3.24.2.v20180905-0014"/>
-		<item value="org.eclipse.mylyn.monitor:3.24.2.v20180904-2231"/>
-		<item value="org.eclipse.mylyn.tasks.ide:3.24.2.v20180905-0003"/>
-		<item value="org.eclipse.mylyn.team_feature:3.24.2.v20180905-0014"/>
-		<item value="org.eclipse.mylyn.versions:1.16.0.v20170629-1738"/>
-		<item value="org.eclipse.mylyn.wikitext.editors_feature:3.0.33.201907111840"/>
-		<item value="org.eclipse.mylyn.wikitext_feature:3.0.33.201907111840"/>
-		<item value="org.eclipse.mylyn_feature:3.24.2.v20180905-0003"/>
-		<item value="org.eclipse.oomph.p2:1.14.0.v20191009-0937"/>
-		<item value="org.eclipse.oomph.setup.core:1.15.0.v20191006-0741"/>
-		<item value="org.eclipse.oomph.setup:1.15.0.v20191009-0937"/>
-		<item value="org.eclipse.rcp:4.13.0.v20190916-1045"/>
-		<item value="org.eclipse.userstorage:1.2.0.v20190308-0433"/>
-		<item value="org.eclipse.wst.xml_ui.feature:3.15.0.v201907091226"/>
-		<item value="org.eclipse.xtext.ui:2.13.0.v20171020-0920"/>
-		<item value="org.eclipse.xtext.xbase.lib:2.13.0.v20171020-0700"/>
-		<item value="org.eclipse.xtext.xbase:2.13.0.v20171020-0920"/>
-	</list>
-	<section name="SmartImportWizard">
-		<item value="false" key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN"/>
-		<item value="false" key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED"/>
-		<item value="true" key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES"/>
-		<item value="true" key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS"/>
-		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
-			<item value="/home/leonardo/jMM/sommacifre"/>
-			<item value="/home/leonardo/jMM/minAnniGiorni"/>
-			<item value="/home/leonardo/jMM/piediToMetri"/>
-			<item value="/home/leonardo/jMM/mancia"/>
-			<item value="/home/leonardo/jMM/energy"/>
-			<item value="/home/leonardo/jMM/capitalieInteressi"/>
-			<item value="/home/leonardo/jMM/tests"/>
-			<item value="/home/leonardo/jMM/Gauss"/>
-		</list>
-	</section>
-	<section name="CleanDialogSettings">
-		<item value="484" key="DIALOG_WIDTH"/>
-		<item value="false" key="TOGGLE_SELECTED"/>
-		<item value="414" key="DIALOG_HEIGHT"/>
-		<item value="718" key="DIALOG_X_ORIGIN"/>
-		<item value="277" key="DIALOG_Y_ORIGIN"/>
-	</section>
 	<section name="ExternalProjectImportWizard">
 		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID"/>
-		<item value="false" key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value=""/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 11 - Esercitazione su array bidimensionali/intervalmerge.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 10 - Esercitazione sui metodi ricorsivi e programmazione procedurale/frequences.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 10 - Esercitazione sui metodi ricorsivi e programmazione procedurale/circularprime.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 10 - Esercitazione sui metodi ricorsivi e programmazione procedurale/partitioner.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 09 - Metodi/unique.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 09 - Metodi/hindex.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 09 - Metodi/strikeball.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 08 - ciclo for/palindromearray.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 08 - ciclo for/arraysum.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 07 -  Istruzione while/duplicatedigit.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 07 -  Istruzione while/invertnumber.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 07 -  Istruzione while/firstlastdigitsum.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 06 - Istruzioni if e if-else/noteensum.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 06 - Istruzioni if e if-else/lonesum.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 06 - Istruzioni if e if-else/evenlyspaced.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 05 - Espressioni Booleane/six.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 05 - Espressioni Booleane/range.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 05 - Espressioni Booleane/order.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 05 - Espressioni Booleane/lastdigit.zip"/>
-			<item value="/home/leonardo/Documenti/UNIFI/20-21/programmazione/Lab 07 -  Istruzione while/harmonicsum.zip"/>
-		</list>
-	</section>
-	<section name="NewWizardAction">
-		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
-		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.jdt.ui.java"/>
-			<item value="javamm.ui.category"/>
+			<item value="C:\Users\leona\Documents\UNIFI\programmazione 19-20\Lab 11 - Esercitazione su array bidimensionali\Lab 11 - Esercitazione su array bidimensionali\spiralmatrix.zip"/>
+			<item value="C:\Users\leona\Documents\UNIFI\programmazione 19-20\Lab 04 - Come svolgere un esercizio Java--\Lab 04 - Come svolgere un esercizio Java--\party.zip"/>
 		</list>
 	</section>
 </section>

@@ -1,0 +1,160 @@
+/*
+ * Dato un numero n>0, la matrice a spirale
+ * corrispondente a n e' la matrice nxn, contenente
+ * i numeri interi da 1 a n*n inseriti nella
+ * matrice secondo un percorso a spirale che,
+ * partendo dall'elemento in alto a sinistra,
+ * procede prima a destra, poi in basso, poi
+ * a sinistra e poi in alto. Ad esempio, la 
+ * matrice a spirale corrispondente al numero 3
+ * e' la matrice
+ * 
+ *  1  2  3 
+ *  8  9  4 
+ *  7  6  5 
+ * 
+ * mentre quella corrispondente al numero 4 e'
+ * la matrice
+ * 
+ *  1  2  3  4 
+ * 12 13 14  5 
+ * 11 16 15  6 
+ * 10  9  8  7 
+ * 
+ * e quella corrispondente al numero 5 e'
+ * la matrice
+ * 
+ *  1  2  3  4  5 
+ * 16 17 18 19  6 
+ * 15 24 25 20  7 
+ * 14 23 22 21  8 
+ * 13 12 11 10  9 
+ * 
+ * Scrivere un metodo, chiamato spiralMatrix,
+ * che, dato in input un numero positivo n e
+ * un numero x compreso tra 1 e n*n, restituisca
+ * un array di due elementi corrispondenti alla
+ * riga e alla colonna della posizione in cui
+ * si trova x all'interno della matrice a spirale
+ * corrispondente a n.
+ * 
+ * ESEMPI
+ * Input: 3, 6
+ * Output: {2,1}
+ * 
+ * Input: 3, 9
+ * Output: {1,1}
+ * 
+ * Input: 4, 1
+ * Output: {0,0}
+ * 
+ * Input: 4, 12
+ * Output: {1,0}
+ * 
+ * Input: 4, 15
+ * Output: {2,2}
+ * 
+ * SUGGERIMENTO: puo' convenire costruire prima la matrice
+ * a spirale e cercare poi nella matrice la posizione
+ * del valore x. Poiche' i numeri che appaiono nella
+ * matrice a spirale sono positivi, si puo' usare lo
+ * 0 come indicatore che una posizione della matrice
+ * non e' ancora stata occupata. Quindi, la costruzione
+ * della matrice puo' essere effettuata muovendosi
+ * in ciascuna direzione fintanto che si incontrano 0 e
+ * fintanto che non si fuoriesce dalla matrice.
+ */
+int [][] makeSpiral(int n){
+	//crea matrice a spirale
+		int [][] nn = new int [n][n];
+		int i=0;//indice orizzontale
+		int j=0;//indice verticale
+		int a=1;//numero da inserire
+	
+		while(a<=n*n) {
+			//System.out.println("j: " + j + " i: " + i + " a: " + a);
+			nn[j][i]=a;
+			a++;
+
+			//mossa : muoversi lungo una direzione
+			// se la mossa è legale && devi andare in quella direzione
+			//puoi andare a destra?
+			//
+			while(i<n-1 && nn[j][i+1]==0) {
+				//stampaMatrix(nn);
+				i++;
+				System.out.println("j: " + j + " i: " + i + " a: " + a);
+				nn[j][i]=a;
+				a++;
+			
+			}
+			//puoi andare in giu?
+			//
+			while(j<n-1  && nn[j+1][i]==0){
+				//stampaMatrix(nn);
+				j++;
+				System.out.println("j: " + j + " i: " + i + " a: " + a);
+				nn[j][i]=a;
+				a++;
+			
+			}
+			
+			//puoi andare a sinistra
+			//
+			while(i>0 && nn[j][i-1]==0){
+				//stampaMatrix(nn);
+				i--;
+				System.out.println("j: " + j + " i: " + i + " a: " + a);
+				nn[j][i]=a;
+				a++;
+		
+			}
+	
+			//puoi andare in su?
+			//
+			while(j>0 && nn[j-1][i]==0){
+				//stampaMatrix(nn);
+				j--;
+				System.out.println("j: " + j + " i: " + i + " a: " + a);
+				nn[j][i]=a;
+				a++;
+				
+			}
+			i++;
+		}
+		
+		return nn;
+}
+
+void stampaMatrix(int [][] a) {
+	//System.out.println(a.length);
+	//System.out.println(a[0].length);
+	for(int i=0;i<a.length;i++) {
+		for(int j=0;j<a[i].length;j++) {
+			System.out.print(" " + a[i][j]);
+		}
+		System.out.println();
+	}
+}
+int[] spiralMatrix(int n, int x) {
+	//crea matrice a spirale
+	int [][] mat = makeSpiral(n);
+	int [] r = new int [2] ;
+	for(int i=0;i<mat.length;i++) {
+		for(int j=0;j<mat[i].length;j++) {
+			if(mat[i][j]==x){
+				r[0] = i;
+				r[1] = j;
+				break;
+			}
+		}
+	}
+	return null;
+}
+//int [][] m = {
+//		{1,2,3},
+//		{4,5,6},
+//		{7,8,9},
+//		{1,2,3}};
+//stampaMatrix(m);
+stampaMatrix(makeSpiral(5));
