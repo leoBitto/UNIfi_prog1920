@@ -1,0 +1,95 @@
+//boolean check(int[] a, int[] b) {
+// 	int n = a.length;
+// 	int sa = 0;
+// 	int sna = 0;
+// 	for(int i = 0; i < n; ++i) {
+// 		sa = sa + a[i] * b[i];
+// 		sna = sna + a[i] * (1-b[i]);
+// 	}
+// 	return (sa % 10 == 0) && (sna % 2 == 1);
+//}
+// boolean partition(int[] a, int[] b, int p) {
+// 	if (p == 0) {
+// 		return check(a, b);
+// 	} else {
+// 		b[p - 1] = 0;
+// 		boolean partitionRis = partition(a, b, p - 1);
+// 	if (partitionRis) {
+// 		return true;
+// 	} else {
+// 		b[p - 1] = 1;
+//	 	partitionRis = partition(a, b, p - 1);
+// 		return partitionRis;
+// 	}
+// }
+//}
+//boolean strangePartition(int[] a) {
+// 	int[] b = new int[a.length];
+// 	return partition(a, b, a.length);
+//}
+
+void stampaArray(int [] a){
+	for(int i=0;i<a.length;i++){
+		System.out.print(a[i] + ", ");
+	}
+	System.out.println();
+}
+
+int sommaTot(int[] a) {
+	int somma = 0;
+	for(int i = 0; i < a.length; i++) {
+		somma += a[i];
+	}
+	return somma;
+}
+
+// a: array sottoinsiemi (con gli zeri)
+// c: array esaminato
+boolean check(int [] a, int [] c){
+	int sum = 0;
+	boolean r = false;
+	//somma tutti i valori in a (array con gli zeri)
+	//sommatoria sottoinsiemi
+	for(int i=0;i<a.length;i++){
+		sum += a[i];
+	}
+	//SE il sottoinsieme ha sommatoria pari
+	//&& la diff. tra somma totale e sommatoria pari
+	//è dispari ALLORA
+	if(sum%10==0 && (sommaTot(c)-sum)%2!=0){
+		r = true;	
+	}
+	return r;
+}
+
+
+void generaSub(int [] a,int [] c, int b) {
+	//caso base
+	if(b==0){
+		//controlla il sotto insieme
+		System.out.print("a: ");
+		stampaArray(a);
+		System.out.print("c: ");
+		stampaArray(c);
+		System.out.println();
+		//return check(a,c);
+	}else{
+		a[b-1]=0;
+		generaSub(a,c,b-1);
+		a[b-1] = c[b-1];
+		generaSub(a,c, b-1);
+	}
+	//return false;
+}
+
+//boolean strangePartition(int[] a) {
+//	//crea una copia vuota dell'array
+// 	int[] sub = new int[a.length];
+// 	//genera i sottoinsiemi
+// 	return generaSub(sub, a, a.length);
+//}
+
+int [] a = {5,5,6,1};
+int [] c = new int [a.length];
+generaSub(c,a,4);
+
